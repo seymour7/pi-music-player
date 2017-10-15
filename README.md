@@ -17,7 +17,7 @@ To get this running on your Raspberry Pi, follow:
    `qemu-user-static`
    `binfmt-support`
 2. Plug in your SD card, and use `lsblk` to determine your SD card's device file (e.g. `/dev/mmcblk0`)
-3. Run `curl -s 'TODO/install.sh' | sudo sh` and follow the prompts
+3. Run `curl -s 'https://raw.githubusercontent.com/seymour7/pi-music-player/master/install.sh' | sudo sh` and follow the prompts
 
 Note: If `install.sh` exits with this error `chroot: failed to run command ‘/usr/bin/bash’: Exec format error` after attempting to chroot into the SD's mount point, you most likely need to enable ARM to x86 translation (see [here](https://github.com/RoEdAl/linux-raspberrypi-wsp/wiki/Building-ArchLinux-ARM-packages-ona-a-PC-using-QEMU-Chroot) and [here](https://wiki.archlinux.org/index.php/change_root#Using_chroot)):
 `sudo update-binfmts --enable qemu-arm`
@@ -49,7 +49,7 @@ Once everything is installed, just boot the Pi, plug in a USB drive and connect 
 
 ### Music not playing
 
-If you Rasp Pi has booted and no music is playing, I'd recommend checking the logs for the music player service:
+If your Raspberry Pi has booted and no music is playing, I'd recommend checking the logs for the music player service:
 
 ```
 journalctl -u pi-music-player
