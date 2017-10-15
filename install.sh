@@ -198,7 +198,7 @@ install_music_app() {
 
   # Retrieve source code for the music player
   if [ ! -d "/home/alarm/pi-music-player" ]; then
-    git clone TODO /home/alarm/pi-music-player
+    git clone https://github.com/seymour7/pi-music-player.git /home/alarm/pi-music-player
   fi
 
   # Create a systemd unit file that runs the music player 
