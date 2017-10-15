@@ -57,13 +57,13 @@ class MusicPlayer(threading.Thread):
 	def setup_gpio(self):
 		GPIO.setmode(GPIO.BCM)
 		GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # set pin 17 as input
-		GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # set pin 27 as input
+		GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # set pin 22 as input
 
 		# Check when 'next song' button is pressed (200ms for debouncing)
 		GPIO.add_event_detect(17, GPIO.RISING, callback=lambda x: self.next_song(), bouncetime=200)
 
 		# Check when 'next playlist' button is pressed (200ms for debouncing)
-		GPIO.add_event_detect(27, GPIO.RISING, callback=lambda x: self.next_playlist(), bouncetime=200)
+		GPIO.add_event_detect(22, GPIO.RISING, callback=lambda x: self.next_playlist(), bouncetime=200)
 
 	def list_dirs(self, directory):
 		"""Returns a list of directories in the given directory"""
