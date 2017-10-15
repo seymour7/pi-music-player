@@ -26,6 +26,8 @@ Note: If `install.sh` exits with this error `chroot: failed to run command ‘/u
 
 Attach push-buttons to pin 17 (next song) and 22 (next playlist) without any pull up/down resistors (the Raspberry Pi has built-in pull-up and pull-down resistors which are enabled in `player.py`).
 
+<img src="https://raw.githubusercontent.com/seymour7/pi-music-player/master/push_buttons.png" width="75%" />
+
 ## Structure for files on usb drive
 Each directory is a different playlist and should consist of only audio files. There should be at least one playlist on the USB drive (hence, at least 1 directory in the root of the drive). See the example below.
 ```
